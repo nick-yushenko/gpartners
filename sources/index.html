@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="shortcut icon" href="sources/img/favicon.svg">
+  <title>GPARTNERS Original Consulting </title>
+
+
+</head>
+
+<body>
+  <div class="templates">
+    <div class="wrap" id="wrap"></div>
+    <div class="wrap" id="caseWrapper" style="position: relative;">
+
+    </div>
+  </div>
+
+  <div class="modal modal-brif">
+    <div class="modal-block">
+      <div class="modal-close">
+        <img src="sources/img/icons/close-icon.svg" alt="">
+      </div>
+      <h3 class="modal-title section-title">
+        Запишитесь <span class="br"></span> на консультацию
+      </h3>
+      <form action="#" class="brif" id="brifForm">
+        <!-- атрибут name менять нельзя, так как иначе начнут появляться подсказки подсказки браузера Chrome -->
+        <!-- можно заменять только на уникальные называния, где нет сочетания phone, name -->
+        <div class="brif-block">
+          <div class="input-block">
+            <input type="text" class="input" placeholder="Имя" autocomplete="off" name="consultname" minlength="2"
+              maxlength="80">
+
+          </div>
+          <div class="input-block">
+            <input type="tel" class="input form-tel" data-tel-input autocomplete="off" name="consultTel" minlength="18"
+              maxlength="18" placeholder="Номер телефона">
+          </div>
+
+        </div>
+        <label class="checkbox  brif-privacy">
+          <input type="checkbox" checked name="privacy">
+
+          <span class="checkbox__text">Даю согласие на обработку персональных данных</span>
+          <img src="sources/img/icons/checkbox-icon.svg" alt="" class="checkbox__icon">
+        </label>
+        <input type="submit" value="Записаться на консультацию" class="js-send-consult btn btn-m form-submit disabled">
+      </form>
+    </div>
+
+    <!-- после успешной отправки показать это (id не используется, если не нужен, можно убрать) -->
+    <div class="modal-block" id="brifResult" style="display: none;">
+      <div class="modal-close">
+        <img src="sources/img/icons/close-icon.svg" alt="">
+      </div>
+      <div class="result">
+        <h3 class="section-title">
+          Спасибо за заявку, в ближайшее время мы вам позвоним
+        </h3>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="modal modal-service " id="serviceModal1">
+    <div class="modal-block">
+      <div class="modal-close">
+        <img src="sources/img/icons/close-icon.svg" alt="">
+      </div>
+      <h3 class="modal-title section-title">
+        Центр управления персоналом
+      </h3>
+
+
+      <div class="modal-service-wrap">
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Аудит системы управления персоналом</span>
+          <p class="text">Знаем, как проверить и повысить эффективность управления персоналом</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Оценка персонала</span>
+          <p class="text">Увеличиваем прибыль компании на одного работающего сотрудника, оценивая потенциал, уровень
+            развития компетенций, результативность, вовлеченность и удовлетворенность сотрудников </p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Настройка системы управления персоналом</span>
+          <p class="text">Помогаем внедрить изменения для повышения эффективности ваших сотрудников</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Обучение управлению персоналом</span>
+          <p class="text">Обучаем HR и руководителей инструментам эффективного управления человеческим капиталом</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">HR консультации</span>
+          <p class="text">Помогаем найти оптимальное решение при настройке системной работы с персоналом</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Разработка системы мотивации персонала</span>
+          <p class="text">Создаем и помогаем внедрить систему мотивации персонала по KPI</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Индивидуальные образовательные программы обучения</span>
+          <p class="text">Повышаем компетенции, необходимые вашим сотрудникам, для
+            достижения целей вашей компании </p>
+        </div>
+      </div>
+      <div class="btn modal-service-btn js-toBrif">
+        Записаться на консультацию
+      </div>
+    </div>
+    <div class="modal-service-brif">
+      <form action="#" class="modal-service-form" id="serviceForm1">
+
+        <input type="hidden" name="serviceName" value="Центр управления персоналом">
+
+        <span class="title">Расскажем подробнее</span>
+        <div class="input-block">
+          <input type="tel" class="input  form-tel" data-tel-input autocomplete="off" name="serviceTel" minlength="18"
+            maxlength="18" placeholder="Введите номер телефона">
+        </div>
+        <input type="submit" value="Записаться на консультацию" class="js-service-submit btn btn-m form-submit disabled">
+      </form>
+      <!-- после успешной отправки показать это (id не используется, если не нужен, можно убрать) -->
+      <div class="modal-service-result" id="serviceResult" style="display: none;">
+        <span>
+          Спасибо за заявку, в ближайшее время мы вам позвоним
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal modal-service " id="serviceModal2">
+    <div class="modal-block">
+      <div class="modal-close">
+        <img src="sources/img/icons/close-icon.svg" alt="">
+      </div>
+      <h3 class="modal-title section-title">
+        Оптимизация модели управления компании
+      </h3>
+
+      <div class="modal-service-wrap">
+
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Оптимизация бизнес-процессов</span>
+          <p class="text">Помогаем компаниям увеличить прибыль на единицу времени, выявляя узкие места и потенциал
+            возможных изменений в бизнес-процессах</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Оптимизация организационной структуры компании</span>
+          <p class="text">Создаем ясную картину устройства бизнеса: кто за что отвечает и кто кому подчиняется,
+            перераспределяем
+            функционал на основании вашей цепочки создания ценности </p>
+        </div>
+      </div>
+      <div class="btn modal-service-btn js-toBrif">
+        Записаться на консультацию
+      </div>
+    </div>
+    <div class="modal-service-brif">
+      <form action="#" class="modal-service-form" id="serviceForm2">
+
+        <input type="hidden" name="serviceName" value="Оптимизация модели управления компании">
+
+        <span class="title">Расскажем подробнее</span>
+        <div class="input-block">
+          <input type="tel" class="input  form-tel" data-tel-input autocomplete="off" name="serviceTel" minlength="18"
+            maxlength="18" placeholder="Введите номер телефона">
+        </div>
+        <input type="submit" value="Записаться на консультацию" class="js-service-submit btn btn-m form-submit disabled">
+      </form>
+      <!-- после успешной отправки показать это (id не используется, если не нужен, можно убрать) -->
+      <div class="modal-service-result" id="serviceResult" style="display: none;">
+        <span>
+          Спасибо за заявку, в ближайшее время мы вам позвоним
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal modal-service " id="serviceModal3">
+
+    <div class="modal-block">
+      <div class="modal-close">
+        <img src="sources/img/icons/close-icon.svg" alt="">
+      </div>
+      <h3 class="modal-title section-title">
+        Стратегическое развитие компании
+      </h3>
+
+      <div class="modal-service-wrap">
+
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Стратегические сессии</span>
+          <p class="text">Знаем, как привести команду к единому видению будущего, учитывая потенциальные возможности и
+            риски</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Разработка бизнес-стратегий</span>
+          <p class="text">Формулируем с вашей командой эффективную стратегию, работающую на увеличение прибыли</p>
+        </div>
+      </div>
+      <div class="btn modal-service-btn js-toBrif">
+        Записаться на консультацию
+      </div>
+    </div>
+    <div class="modal-service-brif">
+      <form action="#" class="modal-service-form" id="serviceForm3">
+
+        <input type="hidden" name="serviceName" value="Стратегическое развитие компании">
+
+        <span class="title">Расскажем подробнее</span>
+        <div class="input-block">
+          <input type="tel" class="input  form-tel" data-tel-input autocomplete="off" name="serviceTel" minlength="18 "
+            maxlength="18" placeholder="Введите номер телефона">
+        </div>
+        <input type="submit" value="Записаться на консультацию" class="js-service-submit btn btn-m form-submit disabled">
+      </form>
+      <!-- после успешной отправки показать это (id не используется, если не нужен, можно убрать) -->
+      <div class="modal-service-result" id="serviceResult" style="display: none;">
+        <span>
+          Спасибо за заявку, в ближайшее время мы вам позвоним
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal modal-service " id="serviceModal4">
+
+    <div class="modal-block">
+      <div class="modal-close">
+        <img src="sources/img/icons/close-icon.svg" alt="">
+      </div>
+      <h3 class="modal-title section-title">
+        Развитие ТОП-команды
+      </h3>
+
+      <div class="modal-service-wrap">
+
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Оценка потенциала</span>
+          <p class="text">Знаем, как оценить потенциал руководителя</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Индивидуальные планы развития</span>
+          <p class="text">Помогаем синхронизировать личные цели руководителей и цели компании</p>
+        </div>
+
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Обучение управленческим компетенциям</span>
+          <p class="text">Обучаем, чтобы минимизировать стоимость управленческой ошибки</p>
+        </div>
+        <div class="modal-service-item">
+          <img src="sources/img/icons/done-icon.svg" alt="">
+          <span class="title">Индивидуальный коучинг</span>
+          <p class="text">Помогаем формировать масштаб личности соразмерный масштабу задач</p>
+        </div>
+      </div>
+      <div class="btn modal-service-btn js-toBrif">
+        Записаться на консультацию
+      </div>
+    </div>
+    <div class="modal-service-brif">
+      <form action="#" class="modal-service-form" id="serviceForm4">
+
+        <input type="hidden" name="serviceName" value="Развитие ТОП-команды">
+
+        <span class="title">Расскажем подробнее</span>
+        <div class="input-block">
+          <input type="tel" class="input  form-tel" data-tel-input autocomplete="off" name="serviceTel" minlength="18"
+            maxlength="18" placeholder="Введите номер телефона">
+        </div>
+        <input type="submit" value="Записаться на консультацию" class="js-service-submit btn btn-m form-submit disabled">
+      </form>
+      <!-- после успешной отправки показать это (id не используется, если не нужен, можно убрать) -->
+      <div class="modal-service-result" id="serviceResult" style="display: none;">
+        <span>
+          Спасибо за заявку, в ближайшее время мы вам позвоним
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <header class="header">
+    <div class="wrap-fluid">
+      <a href="#top" class="logo anchor"><img src="sources/img/logo.png" alt="GPARTNERS Original Consulting"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="#manifesto" class="anchor">Принципы компании</a></li>
+          <li><a href="#services" class="anchor">Наши услуги</a></li>
+          <li><a href="#feed" class="anchor">Отзывы</a></li>
+          <li><a href="#founder" class="anchor">Основатели</a></li>
+          <li><a href="#contact" class="anchor">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="burger js-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#manifesto" class="anchor">Принципы компании</a></li>
+      <li><a href="#services" class="anchor">Наши услуги</a></li>
+      <li><a href="#feed" class="anchor">Отзывы</a></li>
+      <li><a href="#founder" class="anchor">Основатели</a></li>
+      <li><a href="#contact" class="anchor">Контакты</a></li>
+    </ul>
+  </div>
+
+  <main class="main">
+    <section class="hero bg" id="top">
+      <video class="hero-video" id="vid" loop="true" muted="true">
+        <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+        <source media="(min-width: 450px)" src="sources/video/hero-video@2.mp4#t=0.1"
+          type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source media="(min-width: 450px)" src="sources/video/hero-video@2.webm#t=0.1"
+          type='video/webm; codecs="vp8, vorbis"'>
+        <source media="(max-width: 449px)" src="sources/video/pexels-cottonbro-7026843.mp4#t=0.1"
+          type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source media="(max-width: 449px)" src="sources/video/hero-video@1.webm#t=0.1"
+          type='video/webm; codecs="vp8, vorbis"'>
+
+        <img src="sources/video/hero-video@2.mp4#t=0.4" alt="">
+      </video>
+      <script>
+        document.getElementById('vid').play();
+      </script>
+      <div class="wrap">
+        <h1 class="section-title h1 quote">
+          <div class="quote"><img src="sources/img/icons/quote-icon.svg" alt=""></div>
+          Cоздаем <br> индивидуальные <br> решения <span class="op"> для развития <br> людей, команд <br>
+            и&nbsp;компаний</span>
+        </h1>
+        <div class="hero-wrap">
+          <div class="btn js-toBrif">
+            Записаться на консультацию
+          </div>
+          <div class="hero-user">
+            <img src="sources/img/users/hero-user.png" alt="">
+            <div class="descr">
+              <span class="name">Лейла Гайнутдинова</span>
+              <span class="hint">Руководитель внешних коммуникаций</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="manifesto" id="manifesto">
+        <div class="wrap">
+          <h3 class="section-subtitle">Манифест</h3>
+          <div class="manifesto-slider__nav">
+            <div class="manifesto-slider__arrow prev ">
+              <img src="sources/img/icons/arrow-icon.svg" alt="">
+            </div>
+            <div class="manifesto-slider__arrow next ">
+              <img src="sources/img/icons/arrow-icon.svg" alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-container manifesto-slider" id="manifestoSlider">
+
+
+          <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide manifesto-slide">
+              <div class="manifesto-slide__img">
+                <img src="sources/img/manifesto/manifesto-1.svg" alt="">
+              </div>
+              <h4 class="manifesto-slide__title">Мы верим в законы синергии</h4>
+              <p class="manifesto-slide__text">
+                Мы строим такие отношения с клиентом, когда один плюс один всегда больше двух
+              </p>
+            </div>
+            <div class="swiper-slide manifesto-slide">
+              <div class="manifesto-slide__img">
+                <img src="sources/img/manifesto/manifesto-2.svg" alt="">
+              </div>
+              <h4 class="manifesto-slide__title">Развитие для нас – это образ жизни</h4>
+              <p class="manifesto-slide__text">
+                Мы не относимся к развитию как к сложной задаче. Развитие происходит через людей, проекты, моменты
+              </p>
+            </div>
+            <div class="swiper-slide manifesto-slide">
+              <div class="manifesto-slide__img">
+                <img src="sources/img/manifesto/manifesto-3.svg" alt="">
+              </div>
+              <h4 class="manifesto-slide__title">Результат достигается только при правильно поставленной цели</h4>
+              <p class="manifesto-slide__text">
+                Мы не начнем проект, пока не убедимся, что поставленная перед нами цель и есть истинная цель заказчика
+              </p>
+            </div>
+            <div class="swiper-slide manifesto-slide">
+              <div class="manifesto-slide__img">
+                <img src="sources/img/manifesto/manifesto-4.svg" alt="">
+              </div>
+              <h4 class="manifesto-slide__title">Искренность – обязательный элемент работы с людьми</h4>
+              <p class="manifesto-slide__text">
+                Мы всегда заходим в проекты «в долгую» и не можем это делать не искренне. Принимаем особенности друг
+                друга, не притворяясь
+              </p>
+            </div>
+            <div class="swiper-slide manifesto-slide">
+              <div class="manifesto-slide__img">
+                <img src="sources/img/manifesto/manifesto-5.svg" alt="">
+              </div>
+              <h4 class="manifesto-slide__title">Изменения требуют внутренней свободы</h4>
+              <p class="manifesto-slide__text">
+                Свобода внешняя начинается со свободы ментальной. Заходя в изменения, нужно быть готовым оставить
+                прошлый опыт и с любопытством пробовать новое
+              </p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section services" id="services">
+      <div class="wrap">
+        <h3 class="section-subtitle">Наши услуги</h3>
+        <h2 class="section-title">
+          Помогаем компаниям <br> <span class="op">стать эффективнее</span>
+        </h2>
+
+        <div class="services-wrap">
+          <div class="services-item">
+            <div class="services-item__bg">
+              <img src="sources/img/services/service-1-img.jpg" alt="">
+            </div>
+            <img src="sources/img/services/service-1-icon.svg" alt="" class="services-item__img">
+
+            <div class="services-item__title dark">Центр управления персоналом</div>
+            <p class="services-item__text dark">Аудит системы управления персоналом, разработка мотиваций и
+              индивидуальное
+              обучение сотрудников</p>
+            <div class="services-item__link dark js-toService-1">
+              <span>Подробнее</span>
+              <img src="sources/img/icons/arrow-black-icon.svg" alt="">
+            </div>
+          </div>
+          <div class="services-item">
+            <img src="sources/img/services/service-2-icon.svg" alt="" class="services-item__img">
+
+            <div class="services-item__title">Оптимизация модели управления компании</div>
+            <p class="services-item__text">Помогаем компаниям увеличить прибыль на единицу времени, выявляя узкие места
+              и потенциал возможных изменений в бизнес-процессах</p>
+            <div class="services-item__link js-toService-2">
+              <span>Подробнее</span>
+              <img src="sources/img/icons/arrow-blue-icon.svg" alt="">
+            </div>
+          </div>
+          <div class="services-item">
+            <img src="sources/img/services/service-3-icon.svg" alt="" class="services-item__img">
+
+            <div class="services-item__title">Стратегическое развитие компании</div>
+            <p class="services-item__text">Проводим стратегические сессии и разрабатываем бизнес-стратегии</p>
+            <div class="services-item__link js-toService-3">
+              <span>Подробнее</span>
+              <img src="sources/img/icons/arrow-blue-icon.svg" alt="">
+            </div>
+          </div>
+
+          <div class="services-item">
+            <img src="sources/img/services/service-4-icon.svg" alt="" class="services-item__img">
+
+            <div class="services-item__title">Развитие <br> ТОП-команды</div>
+            <p class="services-item__text">Разработка индивидуального плана развития и персональный коучинг</p>
+            <div class="services-item__link js-toService-4">
+              <span>Подробнее</span>
+              <img src="sources/img/icons/arrow-blue-icon.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section cases">
+      <div class="wrap">
+        <h3 class="section-subtitle">Реальные кейсы</h3>
+        <h2 class="section-title">
+          Мы&nbsp;помогаем владельцам бизнеса создавать <span class="br"></span> сильные команды изменений <span
+            class="br"></span>
+          <span class="op">
+            и&nbsp;выходить из&nbsp;операционной деятельности
+          </span>
+        </h2>
+        <div class="cases-item">
+          <div class="cases-head border border-next">
+            <div class="cases-btn"><img src="sources/img/icons/cases-closed-icon.svg" alt=""></div>
+            <div class="cases-head__title">
+              <span class="title">Девелоперская компания <span class="br"></span>
+                ТОП-3 по&nbsp;объему продаж в&nbsp;2020 году
+              </span>
+              <span class="city">г. Смоленск</span>
+            </div>
+            <div class="cases-head__problem">
+              <span class="hint">Задача</span>
+              <p class="text">
+                Изменение организационной структуры в&nbsp;связи с&nbsp;переходом на&nbsp;новую бизнес-модель
+              </p>
+            </div>
+          </div>
+          <div class="cases-body">
+            <div class="cases-body__content">
+              <div class="cases-btn"><img src="sources/img/icons/cases-opened-icon.svg" alt=""></div>
+              <div class="cases-body__title">
+                <span class="title">Девелоперская компания <span class="br"></span>
+                  ТОП-3 по&nbsp;объему продаж в&nbsp;2020 году
+                </span>
+                <span class="city">г. Смоленск</span>
+              </div>
+              <div class="cases-body__problem">
+                <div class="problem-item">
+                  <span class="hint">Задача</span>
+                  <p class="text">
+                    Изменение организационной структуры в&nbsp;связи с&nbsp;переходом на&nbsp;новую бизнес-модель
+                  </p>
+                </div>
+                <div class="problem-item">
+                  <span class="hint">Решение</span>
+                  <ul>
+                    <li>
+                      Анализ новой бизнес-модели;
+                    </li>
+                    <li>
+                      Проектирование процессной модели под новую бизнес-модель;
+                    </li>
+                    <li>
+                      Проектирование целевой организационной модели, поддерживающей процессную модель.
+                    </li>
+                  </ul>
+                </div>
+                <div class="problem-item">
+                  <span class="hint result">Результат</span>
+                  <ul>
+                    <li>
+                      Целевая и&nbsp;переходная модель организационной структуры бизнес-единицы;
+                    </li>
+                    <li>
+                      Описанный функционал структурных подразделений;
+                    </li>
+                    <li>
+                      Матрица разделения полномочий по&nbsp;принятию ключевых управленческих решений между уровнями
+                      управления и&nbsp;отдельными позициями.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cases-item">
+          <div class="cases-head border">
+            <div class="cases-btn"><img src="sources/img/icons/cases-closed-icon.svg" alt=""></div>
+            <div class="cases-head__title">
+              <span class="title">Строительная компания</span>
+              <span class="city">г. Москва</span>
+            </div>
+            <div class="cases-head__problem">
+              <span class="hint">Задача</span>
+              <p class="text">
+                Разработка и&nbsp;внедрение системы управления эффективностью ТОП-команды
+              </p>
+            </div>
+          </div>
+          <div class="cases-body">
+            <div class="cases-body__content">
+              <div class="cases-btn"><img src="sources/img/icons/cases-opened-icon.svg" alt=""></div>
+              <div class="cases-body__title">
+                <span class="title">Строительная компания</span>
+                <span class="city">г. Москва</span>
+              </div>
+              <div class="cases-body__problem">
+                <div class="problem-item">
+                  <span class="hint">Задача</span>
+                  <p class="text">
+                    Разработка и&nbsp;внедрение системы управления эффективностью ТОП-команды
+                  </p>
+                </div>
+                <div class="problem-item">
+                  <span class="hint">Решение</span>
+                  <ul>
+                    <li>
+                      Формирование карты целей и&nbsp;стратегических KPI;
+                    </li>
+                    <li>
+                      Построение системы сбалансированных ключевых показателей;
+                    </li>
+                    <li>
+                      Описание системы оценки эффективности персонала.
+                    </li>
+                  </ul>
+                </div>
+                <div class="problem-item">
+                  <span class="hint result">Результат</span>
+                  <ul>
+                    <li>
+                      Утвержденные стратегические цели;
+                    </li>
+                    <li>
+                      Утвержденные карты KPI;
+                    </li>
+                    <li>
+                      Описание системы оценки эффективности.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cases-item">
+          <div class="cases-head border">
+            <div class="cases-btn"><img src="sources/img/icons/cases-closed-icon.svg" alt=""></div>
+            <div class="cases-head__title">
+              <span class="title">Девелоперская компания</span>
+              <span class="city">г. Белгород</span>
+            </div>
+            <div class="cases-head__problem">
+              <span class="hint">Задача</span>
+              <p class="text">
+                В&nbsp;связи с&nbsp;изменением стратегии возникла необходимость оценки потенциала к&nbsp;изменениям
+                ТОП-команды
+              </p>
+            </div>
+          </div>
+          <div class="cases-body">
+            <div class="cases-body__content">
+              <div class="cases-btn"><img src="sources/img/icons/cases-opened-icon.svg" alt=""></div>
+              <div class="cases-body__title">
+                <span class="title">Девелоперская компания</span>
+                <span class="city">г. Белгород</span>
+              </div>
+              <div class="cases-body__problem">
+                <div class="problem-item">
+                  <span class="hint">Задача</span>
+                  <p class="text">
+                    В&nbsp;связи с&nbsp;изменением стратегии возникла необходимость оценки потенциала к&nbsp;изменениям
+                    ТОП-команды
+                  </p>
+                </div>
+                <div class="problem-item">
+                  <span class="hint">Решение</span>
+                  <ul>
+                    <li>
+                      Глубинное интервью;
+                    </li>
+                    <li>
+                      Ассесмент-центр;
+                    </li>
+                    <li>
+                      Оценка поведенческой модели методом DISC.
+                    </li>
+                  </ul>
+                </div>
+                <div class="problem-item">
+                  <span class="hint result">Результат</span>
+                  <p class="text">
+                    Сформированная команда изменений из&nbsp;числа руководителей с&nbsp;высоким потенциалом
+                    к&nbsp;изменениям
+                    (осознание себя, ориентация на&nbsp;результат, готовность к&nbsp;изменениям, социальная
+                    адаптивность,
+                    интеллектуальный потенциал)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cases-item">
+          <div class="cases-head border">
+            <div class="cases-btn"><img src="sources/img/icons/cases-closed-icon.svg" alt=""></div>
+            <div class="cases-head__title">
+              <span class="title">Коммуникационное агентство
+              </span>
+              <span class="city">г. Москва&nbsp;&mdash; Сингапур</span>
+            </div>
+            <div class="cases-head__problem">
+              <span class="hint">Задача</span>
+              <p class="text">
+                Выработка антикризисной политики на&nbsp;2020 год
+              </p>
+            </div>
+          </div>
+          <div class="cases-body">
+            <div class="cases-body__content">
+              <div class="cases-btn"><img src="sources/img/icons/cases-opened-icon.svg" alt=""></div>
+              <div class="cases-body__title">
+                <span class="title">Коммуникационное агентство</span>
+                <span class="city">г. Москва&nbsp;&mdash; Сингапур</span>
+              </div>
+              <div class="cases-body__problem">
+                <div class="problem-item">
+                  <span class="hint">Задача</span>
+                  <p class="text">
+                    Выработка антикризисной политики на&nbsp;2020 год
+                  </p>
+                </div>
+                <div class="problem-item">
+                  <span class="hint">Решение</span>
+                  <p class="text">
+                    Стратегическая сессия:
+                  </p>
+                  <ul>
+                    <li>
+                      анализ внешней среды и&nbsp;внутренних факторов;
+                    </li>
+                    <li>
+                      карта целей;
+                    </li>
+                    <li>
+                      стратегические проекты;
+                    </li>
+                    <li>
+                      планирование необходимых ресурсов.
+                    </li>
+                  </ul>
+                </div>
+                <div class="problem-item">
+                  <span class="hint result">Результат</span>
+                  <ul>
+                    <li>
+                      Набор стратегических инициатив;
+                    </li>
+                    <li>
+                      Определение целевых показателей;
+                    </li>
+                    <li>
+                      Разработка механизма расчета вознаграждения по&nbsp;выбранным критериям.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cases-item">
+          <div class="cases-head border-prev">
+            <div class="cases-btn"><img src="sources/img/icons/cases-closed-icon.svg" alt=""></div>
+            <div class="cases-head__title">
+              <span class="title">Федеральная девелоперская компания
+              </span>
+              <span class="city">ТОП-20 по&nbsp;РФ</span>
+            </div>
+            <div class="cases-head__problem">
+              <span class="hint">Задача</span>
+              <p class="text">
+                Создание регулярной системы подготовки специалистов,
+                работающих с&nbsp;продуктом и&nbsp;клиентом, включающей в&nbsp;себя
+                внутреннее и&nbsp;внешнее обучение
+              </p>
+            </div>
+          </div>
+          <div class="cases-body">
+            <div class="cases-body__content">
+              <div class="cases-btn"><img src="sources/img/icons/cases-opened-icon.svg" alt=""></div>
+              <div class="cases-body__title">
+                <span class="title">Федеральная девелоперская компания
+                </span>
+                <span class="city">ТОП-20 по&nbsp;РФ</span>
+              </div>
+              <div class="cases-body__problem">
+                <div class="problem-item">
+                  <span class="hint">Задача</span>
+                  <p class="text">
+                    Создание регулярной системы подготовки специалистов,
+                    работающих с&nbsp;продуктом и&nbsp;клиентом, включающей в&nbsp;себя
+                    внутреннее и&nbsp;внешнее обучение
+                  </p>
+                </div>
+                <div class="problem-item">
+                  <span class="hint">Решение</span>
+                  <ul>
+                    <li>
+                      Определение требований к&nbsp;профилю специалистов;
+                    </li>
+                    <li>
+                      Написание учебных модулей;
+                    </li>
+                    <li>
+                      Подготовка внешних и&nbsp;внутренних экспертов;
+                    </li>
+                    <li>
+                      Проведение обучения;
+                    </li>
+                    <li>
+                      Оценка эффективности каждой программы.
+                    </li>
+                  </ul>
+                </div>
+                <div class="problem-item">
+                  <span class="hint result">Результат</span>
+                  <ul>
+                    <li>
+                      Разработаны 12&nbsp;образовательных программ;
+                    </li>
+                    <li>
+                      Подготовлена команда внутренних экспертов;
+                    </li>
+                    <li>
+                      Обучено более 50&nbsp;человек.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cases-item hidden">
+          <div class="cases-head border-prev">
+            <div class="cases-btn"><img src="sources/img/icons/cases-closed-icon.svg" alt=""></div>
+            <div class="cases-head__title">
+              <span class="title">Федеральная девелоперская компания
+              </span>
+              <span class="city">ТОП-20 по&nbsp;РФ</span>
+            </div>
+            <div class="cases-head__problem">
+              <span class="hint">Задача</span>
+              <p class="text">
+                Создание регулярной системы подготовки специалистов,
+                работающих с&nbsp;продуктом и&nbsp;клиентом, включающей в&nbsp;себя
+                внутреннее и&nbsp;внешнее обучение
+              </p>
+            </div>
+          </div>
+          <div class="cases-body">
+            <div class="cases-body__content">
+              <div class="cases-btn"><img src="sources/img/icons/cases-opened-icon.svg" alt=""></div>
+              <div class="cases-body__title">
+                <span class="title">Федеральная девелоперская компания
+                </span>
+                <span class="city">ТОП-20 по&nbsp;РФ</span>
+              </div>
+              <div class="cases-body__problem">
+                <div class="problem-item">
+                  <span class="hint">Задача</span>
+                  <p class="text">
+                    Создание регулярной системы подготовки специалистов,
+                    работающих с&nbsp;продуктом и&nbsp;клиентом, включающей в&nbsp;себя
+                    внутреннее и&nbsp;внешнее обучение
+                  </p>
+                </div>
+                <div class="problem-item">
+                  <span class="hint">Решение</span>
+                  <ul>
+                    <li>
+                      Определение требований к&nbsp;профилю специалистов;
+                    </li>
+                    <li>
+                      Написание учебных модулей;
+                    </li>
+                    <li>
+                      Подготовка внешних и&nbsp;внутренних экспертов;
+                    </li>
+                    <li>
+                      Проведение обучения;
+                    </li>
+                    <li>
+                      Оценка эффективности каждой программы.
+                    </li>
+                  </ul>
+                </div>
+                <div class="problem-item">
+                  <span class="hint result">Результат</span>
+                  <ul>
+                    <li>
+                      Разработаны 12&nbsp;образовательных программ;
+                    </li>
+                    <li>
+                      Подготовлена команда внутренних экспертов;
+                    </li>
+                    <li>
+                      Обучено более 50&nbsp;человек.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cases-more btn">Показать все кейсы </div>
+      </div>
+    </section>
+    <section class="section feed" id="feed">
+      <div class="wrap">
+        <h3 class="section-subtitle">Отзывы клиентов</h3>
+        <h2 class="section-title">
+          Нам доверяют крупные компании
+        </h2>
+      </div>
+
+      <div class="feed-logos__wrapper wrap">
+        <div class="feed-logos">
+          <div class="feed-logos__row">
+
+            <img src="sources/img/feed/logos/logo-1.png" class="img-1" alt="">
+            <img src="sources/img/feed/logos/logo-2.png" class="img-2" alt="">
+            <img src="sources/img/feed/logos/logo-3.png" class="img-3" alt="">
+            <img src="sources/img/feed/logos/logo-4.png" class="img-4" alt="">
+            <img src="sources/img/feed/logos/logo-5.png" class="img-5" alt="">
+            <img src="sources/img/feed/logos/logo-6.svg" class="img-6" alt="">
+          </div>
+
+          <div class="feed-logos__row">
+            <img src="sources/img/feed/logos/logo-7.png" class="img-7" alt="">
+            <img src="sources/img/feed/logos/logo-8.png" class="img-8" alt="">
+            <img src="sources/img/feed/logos/logo-9.png" class="img-9" alt="">
+            <img src="sources/img/feed/logos/logo-10.png" class="img-10" alt="">
+            <img src="sources/img/feed/logos/logo-11.png" class="img-11" alt="">
+            <img src="sources/img/feed/logos/logo-12.png" class="img-12" alt="">
+
+          </div>
+        </div>
+
+
+      </div>
+      <div class="wrap">
+        <div class="feed-wrap">
+          <div class="feed-item opened">
+            <img src="sources/img/icons/quote-2-icon.svg" alt="" class="feed-item__quote">
+
+            <span class="feed-item__title">
+              За время сотрудничества с нашей компанией GP зарекомендовал себя как высокопрофессиональная команда
+              опытных специалистов..
+            </span>
+            <p class="feed-item__text">
+              В период с октября по декабрь 2020 года компания А О Специализированный
+              застройщик «Ваш дом» сотрудничала с GPartners по вопросу изменения организационной
+              структуры, в связи с переходом на новую бизнес-модель.
+            </p>
+
+            <div class="feed-file">
+              <div class="preview">
+                <img src="sources/img/feed/preview/preview-1.png" alt="">
+              </div>
+              <div class="descr">
+
+                <span class="hint">Отзыв о сотрудничестве на оффициальном бланке</span>
+                <a href="sources/files/feed-1.pdf" target="_blank" class="link">Посмотреть</a>
+              </div>
+            </div>
+            <div class="feed-user">
+              <img src="sources/img/users/user-1.png" alt="">
+              <div class="descr">
+                <span class="name">Максим Степанов</span>
+                <span class="hint">Генеральный директор АО Специализированный застройщик «Ваш дом»</span>
+              </div>
+            </div>
+          </div>
+          <div class="feed-item">
+            <img src="sources/img/icons/quote-2-icon.svg" alt="" class="feed-item__quote">
+
+            <span class="feed-item__title">
+              Мы обратились в Компанию GPartners с запросом на создание образовательной программы для всех сотрудников
+              коммерческого блока.
+            </span>
+            <p class="feed-item__text">
+              Выражая благодарность GPartners за плодотворное сотрудничество, мы хотим отметить, что за время совместной
+              работы у нас сложились добрые и конструктивные партнерские отношения.
+            </p>
+
+            <div class="feed-file">
+              <div class="preview">
+                <img src="sources/img/feed/preview/preview-2.png" alt="">
+              </div>
+              <div class="descr">
+
+                <span class="hint">Отзыв о сотрудничестве на оффициальном бланке</span>
+                <a href="sources/files/feed-2.jpeg" target="_blank" class="link">Посмотреть</a>
+              </div>
+            </div>
+            <div class="feed-user">
+              <img src="sources/img/users/user-2.png" alt="">
+              <div class="descr">
+                <span class="name">Гэльнур Валеева</span>
+                <span class="hint">Директор ООО «Стройриэлт»</span>
+              </div>
+            </div>
+          </div>
+          <div class="feed-item">
+            <img src="sources/img/icons/quote-2-icon.svg" alt="" class="feed-item__quote">
+
+            <span class="feed-item__title">
+              В GP меня поразило то, что они не просто были фасилитаторами стратегических
+              сессий. Они подталкивали нас к верному ответу.
+            </span>
+            <p class="feed-item__text">
+              GPartners провели ряд стратегических сессий для нашей компании, в ходе которых мы
+              проанализировали внешние и внутренние факторы, влияющие на компанию,
+              выявили наши сильные и слабые стороны, разработали свою бизнес-модель,
+              сформировали миссию и видение.
+            </p>
+
+            <div class="feed-file">
+              <div class="preview">
+                <img src="sources/img/feed/preview/preview-3.png" alt="">
+              </div>
+              <div class="descr">
+
+                <span class="hint">Отзыв о сотрудничестве на оффициальном бланке</span>
+                <a href="sources/files/feed-3.pdf" target="_blank" class="link">Посмотреть</a>
+              </div>
+            </div>
+            <div class="feed-user">
+              <img src="sources/img/users/user-3.png" alt="">
+              <div class="descr">
+                <span class="name">Алина Галеева </span>
+                <span class="hint">Директор ООО «АПБ ЭЙЮ»</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="feed-more btn js-feedMore">
+          Показать ещё 2 отзыва
+        </div>
+      </div>
+    </section>
+
+    <section class=" founder bg" id="founder">
+      <div class="wrap">
+        <div class="founder-block">
+          <h3 class="section-subtitle">Основатели</h3>
+
+          <h2 class="section-title quote">
+            <div class="quote"><img src="sources/img/icons/quote-icon.svg" alt=""></div>
+            Для каждого проекта мы собираем эксклюзивную команду <span class="op">из лучших отраслевых
+              экспертов</span>
+          </h2>
+          <div class="founder-block__item">
+            <div class="founder-block__image">
+              <img src="sources/img/founders/founder-1@2.png" alt="Гульназ Шарифулина">
+              <span class="name2">Гульназ <span class="br"></span> Шарифулина</span>
+            </div>
+            <div class="founder-block__name">
+              <span class="name">Гульназ Шарифулина</span>
+              <div class="founder-block__opinion">
+                <p>&laquo;Верю в&nbsp;человека как в&nbsp;ресурс для компании, знаю, что в&nbsp;каждом
+                  сотруднике достаточно потенциала для достижения целей. Cекрет успеха
+                  в&nbsp;правильной сборке правильных команд&raquo;</p>
+              </div>
+              <ul class="founder-block__list">
+                <li>13 лет в управлении персоналом</li>
+                <li>повысила эффективность более 1500 сотрудников</li>
+                <li>помогла 16&nbsp;собственникам бизнеса выйти из&nbsp;операционной деятельности</li>
+                <li>собрала 21 команду изменений</li>
+                <li>провела более 120 стратегических и командных сессий</li>
+                <li>модератор бизнес-школы Сколково </li>
+                <li>фасилитатор</li>
+                <li>коуч ICF</li>
+                <li>бизнес-тренер</li>
+              </ul>
+            </div>
+          </div>
+          <div class="founder-block__item">
+            <div class="founder-block__image">
+              <img src="sources/img/founders/founder-2@2.png" alt="Гульназ Шарифулина">
+              <span class="name2">Гузель <span class="br"></span> Газиз</span>
+            </div>
+            <div class="founder-block__name">
+              <span class="name">Гузель Газиз</span>
+              <div class="founder-block__opinion">
+                <p>&laquo;Даю самую честную и&nbsp;прямую обратную связь по&nbsp;сильным сторонам
+                  и&nbsp;зонам развития человека. Cекрет успеха в&nbsp;умении использовать свой
+                  личностный ресурс и&nbsp;потенциал&raquo;</p>
+              </div>
+              <ul class="founder-block__list">
+                <li>более 3600 консультаций по&nbsp;управлению впечатлением и<br>публичным выступления
+                </li>
+                <li>сертифицированный карьерный консультант ТОП-менеджеров</li>
+                <li>построила более 60 личных траекторий развития</li>
+                <li>провела более 10 центров оценки потенциала ТОП-команд</li>
+                <li> продюсер образовательных проектов</li>
+                <li>фасилитатор</li>
+                <li>коуч ICF</li>
+                <li>бизнес-тренер</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section contact bg" id="contact">
+        <div class="wrap">
+          <div class="contact-block">
+            <h3 class="section-subtitle">Контакты</h3>
+
+
+            <h2 class="section-title">
+              Мы помогаем видеть возможности в изменениях
+            </h2>
+
+            <div class="contact-block__content">
+              <div class="contact-block__items">
+                <div class="contact-block__item">
+                  <span class="attribute">Email</span>
+                  <a href="mailto:yourmail@mysite.com">gpartners@gpartnersconsult.ru </a>
+                </div>
+                <div class="contact-block__item">
+                  <span class="attribute">Телефон</span>
+                  <a href="tel:+71234567890">+7 937 775 95 08</a>
+                </div>
+                <div class="contact-block__item">
+                  <span class="attribute">Адрес</span>
+                  <span>Казань, Жуковского 8, офис 4</span>
+                </div>
+                <div class="contact-block__item">
+                  <span class="attribute">Социальные сети</span>
+                  <div class="contact-block__social">
+                    <a href="https://www.facebook.com/gpartners.consult/" class="social" target="_blank">
+                      <div class="contact-block__img">
+                        <img src="sources/img/icons/facebook-icon.svg" alt="">
+                      </div>
+                    </a>
+                    <a href="https://instagram.com/gpartners.consult" class="social" target="_blank">
+                      <div class="contact-block__img">
+                        <img src="sources/img/icons/inst-icon.svg" alt="">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-block__btn">
+                <div class="btn js-toBrif">Записаться на консультацию</div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="wrap map-wrapper">
+          <div class="map" id="map_canvas">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1121.4452928238604!2d49.12977786006258!3d55.795137783088975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead1359c20107%3A0x1c25c5a7456abd73!2z0YPQuy4g0JbRg9C60L7QstGB0LrQvtCz0L4sIDgsIDQsINCa0LDQt9Cw0L3RjCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwgNDIwMDE1!5e0!3m2!1sru!2sru!4v1622724552834!5m2!1sru!2sru"
+              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/request.js"></script>
+</body>
+
+</html>
